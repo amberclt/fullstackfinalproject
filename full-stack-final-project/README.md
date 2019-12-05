@@ -1,4 +1,4 @@
-
+https://github.com/amberclt/fullstackfinalproject/blob/37c3b6aa4271d6e85d6ad62b7ce262147e4fac64/full-stack-final-project/tts-dashboard-screencast.gif?raw=true
 
 A product dashboard, used internally by a company, that uses a RESTful API service, an SQL database and a front end built with Angular.
 
