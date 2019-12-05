@@ -1,0 +1,29 @@
+<div class="page-header">
+    <div class="title">
+        <h2>{{ datasetTitle.plural }}</h2>
+        <span>({{totalDataItems}})</span>
+    </div>
+    <div>
+        <!-- Add an Item -->
+        <button type="button" (click)="openModal()" class="btn btn-outline-secondary add">Add a {{ datasetTitle.singular }}</button>
+        <!-- Filter -->
+        <app-filter
+            [categories]="categories"
+            [suppliers]="suppliers"
+            [datasetName]="datasetName"
+            (onFilteredRequest)="filteredRequest($event)"
+        >
+        </app-filter>
+    </div>
+</div>
+
+<!-- Alerts -->
+<div *ngIf="errorMessage !== ''" class="alert-group">
+    <div [className]="'alert alert-' +  alertType" role="alert">
+        {{ errorMessage }}
+        <button (click)=hideAlert() type="button" class="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
+

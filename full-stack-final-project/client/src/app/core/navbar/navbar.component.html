@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" routerLink="/"><span>TTS</span> Dashboard</a>
+  <button class="navbar-toggler" type="button" (click)="collapsed = !collapsed" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse" [class.collapse]="!collapsed" id="navbarContent">
+      <div class="navbar-nav">
+          <a class="nav-item nav-link" routerLink="products">Products <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" routerLink="suppliers">Suppliers</a>
+          <a class="nav-item nav-link" routerLink="categories">Categories</a>
+      </div>
+  </div>
+</nav>

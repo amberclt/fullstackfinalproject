@@ -1,0 +1,49 @@
+<!-- Page Header -->
+<app-main-page-header
+  [datasetTitle]="datasetTitle"
+  [datasetName]="datasetName"
+  [totalDataItems]="data.paginatedData.totalElements"
+  [categories]="data.categories"
+  (onModalFormSubmit)="handleModalFormSubmit()"
+  [suppliers]="data.suppliers"
+  (onFilteredRequest)="handleFilteredRequest($event)"
+></app-main-page-header>
+
+<!-- Table -->
+<app-table
+  [datasetName]="datasetName"
+  [data]="data.paginatedData"
+  [filterData]="data.filterData"
+  [categories]="data.categories"
+  [suppliers]="data.suppliers"
+  (onUpdateDataItem)="handleUpdateDataItem($event)"
+  (onRemoveItem)="handleRemoveItem($event)"
+  (onSortDataBy)="handleSortDataBy($event)"
+>
+</app-table>
+
+<div class="pagination-container">
+  <!-- Pagination -->
+  <ngb-pagination *ngIf="data.paginatedData.dataset && data.paginatedData.totalElements > data.paginatedData.pageSize"
+      [collectionSize]="data.paginatedData.totalElements" 
+      [pageSize]="data.paginatedData.pageSize"
+      [(page)]="data.paginatedData.currentPage" 
+      [maxSize]="5" 
+      [rotate]="true" 
+      [boundaryLinks]="true"
+      (pageChange)="handlePageChange($event)"
+  >
+  </ngb-pagination>
+
+  <!-- Page Size Filter -->
+  <div ngbDropdown placement="top-right" class="d-inline-block page-size">
+    <button class="btn btn-outline-secondary" id="pageSizeDropDown" ngbDropdownToggle>Page Size ({{data.paginatedData.pageSize}}) </button>
+    <div ngbDropdownMenu aria-labelledby="pageSizeDropDown">
+      <button (click)="choosePageSize(100)" ngbDropdownItem>100</button>
+      <button (click)="choosePageSize(50)" ngbDropdownItem>50</button>
+      <button (click)="choosePageSize(25)" ngbDropdownItem>25</button>
+      <button (click)="choosePageSize(10)" ngbDropdownItem>10</button>
+    </div>
+  </div>
+
+</div>
