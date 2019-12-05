@@ -1,16 +1,6 @@
-## TTS Dashboard | [Live Demo](https://jordanmor.github.io/tts-dashboard-project/)
+
 
 A product dashboard, used internally by a company, that uses a RESTful API service, an SQL database and a front end built with Angular.
-
-**Screencast of the Tech Talent Select Capstone Project - up for review by The Hartford** 
-
-![TTS Dashboard Screen Cast](tts-dashboard-screencast.gif) 
-
-**Project Assigned:** 09/19/2019  
-**Project Due:** 10/04/2019  
-**Project Completed:** 10/04/2019
-
----
 
 ## TTS Dashboard Working Features
 A REST API that can handle the following:
@@ -35,24 +25,9 @@ A front end dashboard built with Angular that:
 - utilizes pagination
 - utilizes a page size filter
 - handles and displays to user select error messages from backend
-- has custom styling and a theme based on three of The Hartford's main website colors
-
-
-### Languages, Frameworks, Tools, Technologies & Plugins Used
-
-| Languages | Frameworks & Libraries | IDEs & Tools  | Plugins       |
-| ------------- | ------------------ | ------------- | ------------- | 
-| Java          | Spring Boot        | IntelliJ IDEA | ng-bootstrap  |
-| JavaScript    | Spring Data JPA    | VS Code       | font-awesome  | 
-| TypeScript    | Spring Web         | Git           |               |
-| SQL           | Angular            | GitHub        |               |
-|               | Bootstrap 4        | Heroku        |               |
-|               | Lodash             |               |               |
-
----
 
 ## Installation Instructions - SERVER
-1. git clone https://github.com/jordanmor/tts-dashboard.git
+1. git clone https://github.com/amberclt/fullstackfinalproject.git
 2. Open project in your IDE of choice, e.g., IntelliJ, Eclipse.
 3. Choose the project SDK and wait for the IDE to sync the Maven project.
 4. Create a MySQL database named `dashboard` using MySQL WorkBench or your tool of choice.
@@ -80,7 +55,7 @@ for the Heroku connection and use the following properties to use the app with y
 5. Go to the file `client/src/core/services/data.service.ts` and:  
   Comment out the following url setting used in production for connecting to the API hosted on Heroku
       ```
-    host: string = 'https://ttsdashboard.herokuapp.com';
+    host: string = '';
     ```
     Uncomment the following url setting to use for local development and testing:
     ```
@@ -103,19 +78,6 @@ In order for the build files to be saved in the `../docs` folder located outside
 - outputPath set to ../docs
 - baseHref to /tts-dashboard-project/
 
-**Build live demo for GitHub** 
-
-Make a duplicate of the `index.html` file in the `docs` directory and rename it to `404.html`. Make sure to keep the `index.html` file.
-
-Commit the `docs` directory to your GitHub repository named `tts-dashboard-project`. Go to the repo's settings and select the `master branch/docs` folder as the source of your GitHub page.
-
-**Additional information**  
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
-
-----
 
 ## Original Project Instructions
 
